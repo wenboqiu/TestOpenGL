@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoSavePoint</key>
+	<dict>
+		<key>reversionPoints</key>
+		<dict>
+			<key>w3RxNUNAQSCQ8F_0k7C6ag</key>
+			<dict>
+				<key>masterBranch</key>
+				<dict>
+					<key>baseHistoryDigest</key>
+					<string>8mxdYk8b3XEoZ3uvrOyFJnINABU</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>timestamp</key>
+		<date>2015-09-03T07:27:52Z</date>
+	</dict>
+	<key>openPoint</key>
+	<dict>
+		<key>reversionPoints</key>
+		<dict>
+			<key>w3RxNUNAQSCQ8F_0k7C6ag</key>
+			<dict>
+				<key>masterBranch</key>
+				<dict>
+					<key>baseHistoryDigest</key>
+					<string>DZ_FPKuDvABlaVewyexOALFRETQ</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>timestamp</key>
+		<date>2015-08-31T11:29:52Z</date>
+	</dict>
+	<key>savePoint</key>
+	<dict>
+		<key>reversionPoints</key>
+		<dict>
+			<key>w3RxNUNAQSCQ8F_0k7C6ag</key>
+			<dict>
+				<key>masterBranch</key>
+				<dict>
+					<key>baseHistoryDigest</key>
+					<string>_nCivmsAOFSe6kgGDJtEsUToUNk</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>timestamp</key>
+		<date>2015-08-31T11:30:45Z</date>
+	</dict>
+	<key>userNames</key>
+	<dict>
+		<key>root</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

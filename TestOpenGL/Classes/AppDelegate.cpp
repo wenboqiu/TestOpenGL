@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+//#include "HelloWorldScene.h"
+#include "controller.h"
 
 USING_NS_CC;
 
@@ -47,16 +48,23 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
-
-    // run
-    director->runWithScene(scene);
+//    auto scene = HelloWorld::createScene();
+//
+//    // run
+//    director->runWithScene(scene);
+    
+    _testController = TestController::getInstance();
 
     return true;
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
+    if (_testController)
+    {
+        _testController->onEnterBackground();
+    }
+    
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
@@ -65,6 +73,11 @@ void AppDelegate::applicationDidEnterBackground() {
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
+    if (_testController)
+    {
+        _testController->onEnterForeground();
+    }
+    
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here

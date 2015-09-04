@@ -16,7 +16,12 @@
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */; };
 		40829C231B7AB7B200F74D33 /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 40829C221B7AB7B200F74D33 /* shaders */; };
-		40829C281B7ABA7200F74D33 /* SixPointedStar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40829C261B7ABA7200F74D33 /* SixPointedStar.cpp */; };
+		40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660451B99980800E9389F /* BaseTest.cpp */; };
+		40C6604D1B99980800E9389F /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660471B99980800E9389F /* controller.cpp */; };
+		40C660511B999A4400E9389F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 40C660501B999A4400E9389F /* Images */; };
+		40C660571B999BDF00E9389F /* TransformTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660551B999BDF00E9389F /* TransformTest.cpp */; };
+		40C6605A1B99A85A00E9389F /* DrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660581B99A85A00E9389F /* DrawNode3D.cpp */; };
+		40C660601B99AD7C00E9389F /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C6605E1B99AD7C00E9389F /* Star.cpp */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -25,8 +30,6 @@
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -114,15 +117,25 @@
 		40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisibleRect.cpp; sourceTree = "<group>"; };
 		40829C201B7AB79C00F74D33 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibleRect.h; sourceTree = "<group>"; };
 		40829C221B7AB7B200F74D33 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
-		40829C261B7ABA7200F74D33 /* SixPointedStar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SixPointedStar.cpp; sourceTree = "<group>"; };
-		40829C271B7ABA7200F74D33 /* SixPointedStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixPointedStar.h; sourceTree = "<group>"; };
+		40C660451B99980800E9389F /* BaseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseTest.cpp; sourceTree = "<group>"; };
+		40C660461B99980800E9389F /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTest.h; sourceTree = "<group>"; };
+		40C660471B99980800E9389F /* controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = controller.cpp; sourceTree = "<group>"; };
+		40C660481B99980800E9389F /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = controller.h; sourceTree = "<group>"; };
+		40C6604A1B99980800E9389F /* testBasic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testBasic.h; sourceTree = "<group>"; };
+		40C6604B1B99980800E9389F /* tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tests.h; sourceTree = "<group>"; };
+		40C6604F1B99995B00E9389F /* testResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testResource.h; sourceTree = "<group>"; };
+		40C660501B999A4400E9389F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		40C660551B999BDF00E9389F /* TransformTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformTest.cpp; sourceTree = "<group>"; };
+		40C660561B999BDF00E9389F /* TransformTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformTest.h; sourceTree = "<group>"; };
+		40C660581B99A85A00E9389F /* DrawNode3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode3D.cpp; sourceTree = "<group>"; };
+		40C660591B99A85A00E9389F /* DrawNode3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode3D.h; sourceTree = "<group>"; };
+		40C6605E1B99AD7C00E9389F /* Star.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Star.cpp; sourceTree = "<group>"; };
+		40C6605F1B99AD7C00E9389F /* Star.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -281,18 +294,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40829C251B7AB87700F74D33 /* Sample5_1 */ = {
+		40C660541B999BBC00E9389F /* Chapter5 */ = {
 			isa = PBXGroup;
 			children = (
-				40829C261B7ABA7200F74D33 /* SixPointedStar.cpp */,
-				40829C271B7ABA7200F74D33 /* SixPointedStar.h */,
+				40C660551B999BDF00E9389F /* TransformTest.cpp */,
+				40C660561B999BDF00E9389F /* TransformTest.h */,
+				40C6605E1B99AD7C00E9389F /* Star.cpp */,
+				40C6605F1B99AD7C00E9389F /* Star.h */,
 			);
-			path = Sample5_1;
+			path = Chapter5;
 			sourceTree = "<group>";
 		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40C660501B999A4400E9389F /* Images */,
 				40829C221B7AB7B200F74D33 /* shaders */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -307,13 +323,20 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				40829C251B7AB87700F74D33 /* Sample5_1 */,
+				40C660581B99A85A00E9389F /* DrawNode3D.cpp */,
+				40C660591B99A85A00E9389F /* DrawNode3D.h */,
+				40C660541B999BBC00E9389F /* Chapter5 */,
+				40C6604A1B99980800E9389F /* testBasic.h */,
+				40C6604F1B99995B00E9389F /* testResource.h */,
+				40C660451B99980800E9389F /* BaseTest.cpp */,
+				40C660461B99980800E9389F /* BaseTest.h */,
+				40C660471B99980800E9389F /* controller.cpp */,
+				40C660481B99980800E9389F /* controller.h */,
+				40C6604B1B99980800E9389F /* tests.h */,
 				40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */,
 				40829C201B7AB79C00F74D33 /* VisibleRect.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -466,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C660511B999A4400E9389F /* Images in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -513,13 +537,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C6604D1B99980800E9389F /* controller.cpp in Sources */,
+				40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				40829C281B7ABA7200F74D33 /* SixPointedStar.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				40C660601B99AD7C00E9389F /* Star.cpp in Sources */,
+				40C6605A1B99A85A00E9389F /* DrawNode3D.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				40C660571B999BDF00E9389F /* TransformTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +556,6 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
