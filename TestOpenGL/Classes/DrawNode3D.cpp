@@ -34,6 +34,7 @@ DrawNode3D::DrawNode3D()
 , _bufferCount(0)
 , _buffer(nullptr)
 , _dirty(false)
+, _drawMode(GL_LINES)
 {
     _blendFunc = BlendFunc::ALPHA_PREMULTIPLIED;
 }
@@ -78,6 +79,23 @@ void DrawNode3D::ensureCapacity(int count)
 		_bufferCapacity += MAX(_bufferCapacity, count);
 		_buffer = (V3F_C4B*)realloc(_buffer, _bufferCapacity*sizeof(V3F_C4B));
 	}
+}
+
+void DrawNode3D::loadShaderVertex(const std::string &vert, const std::string &frag)
+{
+    auto fileUtiles = FileUtils::getInstance();
+    
+    // frag
+    auto fragmentFilePath = fileUtiles->fullPathForFilename(frag);
+    auto fragSource = fileUtiles->getStringFromFile(fragmentFilePath);
+    
+    // vert
+    auto vertexFilePath = fileUtiles->fullPathForFilename(vert);
+    auto vertSource = fileUtiles->getStringFromFile(vertexFilePath);
+    
+    auto glprogram = GLProgram::createWithByteArrays(vertSource.c_str(), fragSource.c_str());
+    auto glprogramstate = GLProgramState::getOrCreateWithGLProgram(glprogram);
+    setGLProgramState(glprogramstate);
 }
 
 bool DrawNode3D::init()
@@ -154,19 +172,8 @@ void DrawNode3D::onDraw(const Mat4 &transform, uint32_t flags)
     {
         GL::bindVAO(_vao);
     }
-    /*else
-    {
-        GL::enableVertexAttribs(GL::VERTEX_ATTRIB_FLAG_POS_COLOR_TEX);
 
-        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-        // vertex
-        glVertexAttribPointer(GLProgram::VERTEX_ATTRIB_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(V3F_C4B), (GLvoid *)offsetof(V3F_C4B, vertices));
-
-        // color
-        glVertexAttribPointer(GLProgram::VERTEX_ATTRIB_COLOR, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(V3F_C4B), (GLvoid *)offsetof(V3F_C4B, colors));
-    }*/
-
-    glDrawArrays(GL_TRIANGLE_FAN, 0, _bufferCount);
+    glDrawArrays(_drawMode, 0, _bufferCount);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     CC_INCREMENT_GL_DRAWN_BATCHES_AND_VERTICES(1,_bufferCount);

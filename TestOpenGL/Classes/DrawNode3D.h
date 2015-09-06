@@ -55,8 +55,10 @@ public:
     * @lua NA
     */
     void setBlendFunc(const BlendFunc &blendFunc);
+    
+    void loadShaderVertex(const std::string &vert, const std::string &frag);
 
-    void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
+    virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
     
     // Overrides
     virtual void draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t flags) override;
@@ -85,6 +87,8 @@ protected:
     cocos2d::CustomCommand _customCommand;
 
     bool        _dirty;
+    
+    GLuint _drawMode;
 
 private:
     CC_DISALLOW_COPY_AND_ASSIGN(DrawNode3D);

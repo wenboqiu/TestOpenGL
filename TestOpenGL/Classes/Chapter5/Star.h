@@ -17,6 +17,10 @@ class Star : public cocos2d::DrawNode3D
 public:
     CREATE_FUNC(Star);
     void drawStar(float radiusOut, float radiusIn);
+    
+CC_CONSTRUCTOR_ACCESS:
+    Star();
+    virtual ~Star(){}
 };
 
 #endif /* defined(__TestOpenGL__Star__) */

@@ -9,6 +9,11 @@
 #include "Star.h"
 USING_NS_CC;
 
+Star::Star()
+{
+    _drawMode = GL_TRIANGLE_FAN;
+}
+
 void Star::drawStar(float radiusOut, float radiusIn)
 {
     clear();

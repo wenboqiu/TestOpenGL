@@ -17,7 +17,7 @@ public:
     RootTests()
     {
         addTest("Chapter 5", [](){return new (std::nothrow) TransformTest(); });
-
+        addTest("Chapter 6", [](){return new (std::nothrow) LightTest(); });
     }
 };
 

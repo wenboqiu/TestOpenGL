@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __TestOpenGL__Sample5_1__
-#define __TestOpenGL__Sample5_1__
+#ifndef __TestOpenGL__TransformTest__
+#define __TestOpenGL__TransformTest__
 
 #include "../testBasic.h"
 #include "../BaseTest.h"
@@ -27,10 +27,6 @@ protected:
     virtual std::string subtitle() const override {return _subtitle;};
     cocos2d::Camera* _camera;
     
-    
-//    cocos2d::Node* _camControlNode;
-//    cocos2d::Node* _camNode;
-//    cocos2d::EventListenerTouchOneByOne* _lis;
 };
 
 class TransformTest1 : public TransformTestCase
@@ -47,4 +43,18 @@ public:
     TransformTest2();
 };
 
-#endif /* defined(__TestOpenGL__Sample5_1__) */
+class TransformTest3 : public TransformTestCase
+{
+public:
+    CREATE_FUNC(TransformTest3);
+    TransformTest3();
+    
+protected:
+    cocos2d::OBB _obbt;
+    
+    cocos2d::Node* _camControlNode;
+    cocos2d::Node* _camNode;
+    cocos2d::EventListenerTouchOneByOne* _lis;
+};
+
+#endif /* defined(__TestOpenGL__TransformTest__) */
