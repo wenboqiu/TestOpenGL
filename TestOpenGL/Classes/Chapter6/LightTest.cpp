@@ -51,7 +51,7 @@ LightTestCase::LightTestCase()
         Camera::getDefaultCamera()->setPosition3D(worldPos);
         Camera::getDefaultCamera()->lookAt(_camControlNode->getPosition3D());
         
-//        _ball->setCameraLocaiton(worldPos);
+        _ball->setCameraLocaiton(worldPos);
     };
     
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(_lis, this);
@@ -166,7 +166,9 @@ LightTest5::LightTest5()
     
     updateLightLocation(slider->getPercent());
     
-    auto s = Director::getInstance()->getWinSize();
-    float zeye = Director::getInstance()->getZEye();
-    _ball->setCameraLocaiton(Vec3(s.width/2, s.height/2.0f, zeye));
+//    auto s = Director::getInstance()->getWinSize();
+//    float zeye = Director::getInstance()->getZEye();
+//    _ball->setCameraLocaiton(Vec3(s.width/2, s.height/2.0f, zeye));
+    _ball->setCameraLocaiton(Camera::getDefaultCamera()->getPosition3D());
+
 }

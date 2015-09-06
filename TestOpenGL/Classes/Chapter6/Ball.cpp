@@ -88,6 +88,9 @@ void Ball::onDraw(const Mat4 &transform, uint32_t flags)
     GLint location2 = glProgram->getUniformLocation("u_lightLocation");
     glProgram->setUniformLocationWith3f(location2, _lightLocation.x, _lightLocation.y, _lightLocation.z);
     
+    GLint location3 = glProgram->getUniformLocation("u_camera");
+    glProgram->setUniformLocationWith3f(location3, _cameraLocation.x, _cameraLocation.y, _cameraLocation.z);
+    
     glDrawArrays(_drawMode, 0, _bufferCount);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     
