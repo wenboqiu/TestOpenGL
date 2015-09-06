@@ -17,7 +17,8 @@ LightTest::LightTest()
     ADD_TEST_CASE(LightTest1);
     ADD_TEST_CASE(LightTest2);
     ADD_TEST_CASE(LightTest3);
-
+    ADD_TEST_CASE(LightTest4);
+    ADD_TEST_CASE(LightTest5);
 }
 
 LightTestCase::LightTestCase()
@@ -49,6 +50,8 @@ LightTestCase::LightTestCase()
         
         Camera::getDefaultCamera()->setPosition3D(worldPos);
         Camera::getDefaultCamera()->lookAt(_camControlNode->getPosition3D());
+        
+//        _ball->setCameraLocaiton(worldPos);
     };
     
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(_lis, this);
@@ -58,6 +61,22 @@ void LightTestCase::onBackCallback(cocos2d::Ref *sender)
 {
     TestCase::onBackCallback(sender);
     Director::getInstance()->setClearColor(Color4F::BLACK);
+}
+
+void LightTestCase::sliderEvent(Ref *pSender, Slider::EventType type)
+{
+    if (type == Slider::EventType::ON_PERCENTAGE_CHANGED)
+    {
+        Slider* slider = dynamic_cast<Slider*>(pSender);
+        updateLightLocation(slider->getPercent());
+    }
+}
+
+void LightTestCase::updateLightLocation(int percent)
+{
+    auto s = Director::getInstance()->getWinSize();
+    float newX = s.width * percent / 100;
+    _ball->setLightLocaiton(Vec3(newX, s.height/2, 300.0f));
 }
 
 LightTest1::LightTest1()
@@ -105,18 +124,49 @@ LightTest3::LightTest3()
     updateLightLocation(slider->getPercent());
 }
 
-void LightTest3::sliderEvent(Ref *pSender, Slider::EventType type)
+LightTest4::LightTest4()
 {
-    if (type == Slider::EventType::ON_PERCENTAGE_CHANGED)
-    {
-        Slider* slider = dynamic_cast<Slider*>(pSender);
-        updateLightLocation(slider->getPercent());
-    }
+    _title = "Sample6_4";
+    _subtitle = "test specular";
+    
+    _ball = Ball::create();
+    _ball->setPosition(Vec2(VisibleRect::center().x, VisibleRect::center().y));
+    _ball->loadShaderVertex("shaders/sample6_4.vert", "shaders/sample6_4.frag");
+    _ball->drawSphere(200.0f);
+    addChild(_ball);
+    
+    auto* slider = Slider::create();
+    slider->loadBarTexture("sliderTrack.png");
+    slider->loadSlidBallTextures("sliderThumb.png");
+    slider->setPosition(Vec2(VisibleRect::center().x, VisibleRect::top().y - 100));
+    slider->addEventListener(CC_CALLBACK_2(LightTest4::sliderEvent, this));
+    addChild(slider);
+    
+    updateLightLocation(slider->getPercent());
+    _ball->setCameraLocaiton(Camera::getDefaultCamera()->getPosition3D());
 }
 
-void LightTest3::updateLightLocation(int percent)
+LightTest5::LightTest5()
 {
+    _title = "Sample6_5";
+    _subtitle = "test combine";
+    
+    _ball = Ball::create();
+    _ball->setPosition(Vec2(VisibleRect::center().x, VisibleRect::center().y));
+    _ball->loadShaderVertex("shaders/sample6_5.vert", "shaders/sample6_5.frag");
+    _ball->drawSphere(200.0f);
+    addChild(_ball);
+    
+    auto* slider = Slider::create();
+    slider->loadBarTexture("sliderTrack.png");
+    slider->loadSlidBallTextures("sliderThumb.png");
+    slider->setPosition(Vec2(VisibleRect::center().x, VisibleRect::top().y - 100));
+    slider->addEventListener(CC_CALLBACK_2(LightTest4::sliderEvent, this));
+    addChild(slider);
+    
+    updateLightLocation(slider->getPercent());
+    
     auto s = Director::getInstance()->getWinSize();
-    float newX = s.width * percent / 100;
-    _ball->setLightLocaiton(Vec3(newX, s.height/2, 300.0f));
+    float zeye = Director::getInstance()->getZEye();
+    _ball->setCameraLocaiton(Vec3(s.width/2, s.height/2.0f, zeye));
 }

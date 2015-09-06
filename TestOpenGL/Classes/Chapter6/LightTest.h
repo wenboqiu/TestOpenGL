@@ -16,10 +16,14 @@
 
 DEFINE_TEST_SUITE(LightTest);
 
+class Ball;
 class LightTestCase : public TestCase
 {
 public:
     LightTestCase();
+    
+    void sliderEvent(cocos2d::Ref* sender, cocos2d::ui::Slider::EventType type);
+    void updateLightLocation(int percent);
     
 protected:
     virtual void onBackCallback(Ref* sender);
@@ -33,6 +37,8 @@ protected:
     cocos2d::Node* _camControlNode;
     cocos2d::Node* _camNode;
     cocos2d::EventListenerTouchOneByOne* _lis;
+    
+    Ball* _ball;
 };
 
 class LightTest1 : public LightTestCase
@@ -49,17 +55,25 @@ public:
     LightTest2();
 };
 
-class Ball;
+
 class LightTest3 : public LightTestCase
 {
 public:
     CREATE_FUNC(LightTest3);
     LightTest3();
-    
-    void sliderEvent(cocos2d::Ref* sender, cocos2d::ui::Slider::EventType type);
-    void updateLightLocation(int percent);
-private:
-    Ball* _ball;
 };
 
+class LightTest4 : public LightTestCase
+{
+public:
+    CREATE_FUNC(LightTest4);
+    LightTest4();
+};
+
+class LightTest5 : public LightTestCase
+{
+public:
+    CREATE_FUNC(LightTest5);
+    LightTest5();
+};
 #endif /* defined(__TestOpenGL__LightTest__) */

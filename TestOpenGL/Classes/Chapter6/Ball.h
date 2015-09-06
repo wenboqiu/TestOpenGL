@@ -22,6 +22,8 @@ public:
     
     inline void setLightLocaiton(cocos2d::Vec3 location){ _lightLocation = location; }
     
+    inline void setCameraLocaiton(cocos2d::Vec3 location){ _cameraLocation = location; }
+    
 CC_CONSTRUCTOR_ACCESS:
     Ball();
     virtual ~Ball(){}
@@ -29,6 +31,7 @@ CC_CONSTRUCTOR_ACCESS:
 protected:
     float _radius;
     cocos2d::Vec3 _lightLocation;
+    cocos2d::Vec3 _cameraLocation;
 };
 
 #endif /* defined(__TestOpenGL__Ball__) */
