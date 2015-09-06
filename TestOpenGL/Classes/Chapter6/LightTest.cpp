@@ -19,6 +19,7 @@ LightTest::LightTest()
     ADD_TEST_CASE(LightTest3);
     ADD_TEST_CASE(LightTest4);
     ADD_TEST_CASE(LightTest5);
+    ADD_TEST_CASE(LightTest9);
 }
 
 LightTestCase::LightTestCase()
@@ -149,7 +150,7 @@ LightTest4::LightTest4()
 LightTest5::LightTest5()
 {
     _title = "Sample6_5";
-    _subtitle = "test combine";
+    _subtitle = "test combine (per vert lighting)";
     
     _ball = Ball::create();
     _ball->setPosition(Vec2(VisibleRect::center().x, VisibleRect::center().y));
@@ -165,10 +166,29 @@ LightTest5::LightTest5()
     addChild(slider);
     
     updateLightLocation(slider->getPercent());
-    
-//    auto s = Director::getInstance()->getWinSize();
-//    float zeye = Director::getInstance()->getZEye();
-//    _ball->setCameraLocaiton(Vec3(s.width/2, s.height/2.0f, zeye));
     _ball->setCameraLocaiton(Camera::getDefaultCamera()->getPosition3D());
 
+}
+
+LightTest9::LightTest9()
+{
+    _title = "Sample6_9";
+    _subtitle = "test per frag lighting";
+    
+    _ball = Ball::create();
+    _ball->setPosition(Vec2(VisibleRect::center().x, VisibleRect::center().y));
+    _ball->loadShaderVertex("shaders/sample6_9.vert", "shaders/sample6_9.frag");
+    _ball->drawSphere(200.0f);
+    addChild(_ball);
+    
+    auto* slider = Slider::create();
+    slider->loadBarTexture("sliderTrack.png");
+    slider->loadSlidBallTextures("sliderThumb.png");
+    slider->setPosition(Vec2(VisibleRect::center().x, VisibleRect::top().y - 100));
+    slider->addEventListener(CC_CALLBACK_2(LightTest4::sliderEvent, this));
+    addChild(slider);
+    
+    updateLightLocation(slider->getPercent());
+    _ball->setCameraLocaiton(Camera::getDefaultCamera()->getPosition3D());
+    
 }

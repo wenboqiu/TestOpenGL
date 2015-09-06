@@ -76,4 +76,11 @@ public:
     CREATE_FUNC(LightTest5);
     LightTest5();
 };
+
+class LightTest9 : public LightTestCase
+{
+public:
+    CREATE_FUNC(LightTest9);
+    LightTest9();
+};
 #endif /* defined(__TestOpenGL__LightTest__) */
