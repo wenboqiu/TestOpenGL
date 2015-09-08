@@ -35,8 +35,7 @@ NS_CC_BEGIN
 class DrawNode3D: public cocos2d::Node
 {
 public:
-    /** creates and initialize a DrawNode3D node */
-    static cocos2d::DrawNode3D* create();
+    virtual void reallocBuffer() = 0;
     
     /** Clear the geometry in the node's buffer. */
     void clear();
@@ -58,7 +57,7 @@ public:
     
     void loadShaderVertex(const std::string &vert, const std::string &frag);
 
-    virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
+    virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags) = 0;
     
     // Overrides
     virtual void draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t flags) override;
@@ -66,14 +65,9 @@ public:
 CC_CONSTRUCTOR_ACCESS:
     DrawNode3D();
     virtual ~DrawNode3D();
-    virtual bool init() override;
+    virtual bool init() override = 0;
 
 protected:
-    struct V3F_C4B
-    {
-        cocos2d::Vec3     vertices;
-        Color4B  colors;
-    };
     void ensureCapacity(int count);
 
     GLuint      _vao;
@@ -81,7 +75,6 @@ protected:
 
     int         _bufferCapacity;
     GLsizei     _bufferCount;
-    V3F_C4B*    _buffer;
 
     BlendFunc   _blendFunc;
     cocos2d::CustomCommand _customCommand;

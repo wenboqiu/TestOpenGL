@@ -1,0 +1,102 @@
+//
+//  DrawNode_VT.cpp
+//  TestOpenGL
+//
+//  Created by wenboqiu on 9/8/15.
+//
+//
+
+#include "DrawNode_VT.h"
+USING_NS_CC;
+
+DrawNode_VT::DrawNode_VT()
+: _buffer(nullptr)
+{
+}
+
+DrawNode_VT::~DrawNode_VT()
+{
+    free(_buffer);
+    _buffer = nullptr;
+}
+
+void DrawNode_VT::reallocBuffer()
+{
+    _buffer = (V3F_T2F*)realloc(_buffer, _bufferCapacity*sizeof(V3F_T2F));
+}
+
+bool DrawNode_VT::init()
+{
+    _blendFunc = BlendFunc::ALPHA_PREMULTIPLIED;
+    
+    setGLProgramState(GLProgramState::getOrCreateWithGLProgramName(GLProgram::SHADER_NAME_POSITION_COLOR));
+    
+    ensureCapacity(512);
+    
+    if (Configuration::getInstance()->supportsShareableVAO())
+    {
+        glGenVertexArrays(1, &_vao);
+        GL::bindVAO(_vao);
+    }
+    
+    glGenBuffers(1, &_vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(V3F_T2F)* _bufferCapacity, _buffer, GL_STREAM_DRAW);
+    
+    glEnableVertexAttribArray(GLProgram::VERTEX_ATTRIB_POSITION);
+    glVertexAttribPointer(GLProgram::VERTEX_ATTRIB_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(V3F_T2F), (GLvoid *)offsetof(V3F_T2F, vertices));
+    
+    glEnableVertexAttribArray(GLProgram::VERTEX_ATTRIB_TEX_COORD);
+    glVertexAttribPointer(GLProgram::VERTEX_ATTRIB_TEX_COORD, 2, GL_FLOAT, GL_FALSE, sizeof(V3F_T2F), (GLvoid *)offsetof(V3F_T2F, texCoords));
+    
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
+    if (Configuration::getInstance()->supportsShareableVAO())
+    {
+        GL::bindVAO(0);
+    }
+    
+    CHECK_GL_ERROR_DEBUG();
+    
+    _dirty = true;
+    
+#if CC_ENABLE_CACHE_TEXTURE_DATA
+    // Need to listen the event only when not use batchnode, because it will use VBO
+    auto listener = EventListenerCustom::create(EVENT_COME_TO_FOREGROUND, [this](EventCustom* event){
+        /** listen the event that coming to foreground on Android */
+        this->init();
+    });
+    
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+#endif
+    
+    return true;
+}
+
+void DrawNode_VT::onDraw(const Mat4 &transform, uint32_t flags)
+{
+    auto glProgram = getGLProgram();
+    glProgram->use();
+    glProgram->setUniformsForBuiltins(transform);
+    glEnable(GL_DEPTH_TEST);
+    GL::blendFunc(_blendFunc.src, _blendFunc.dst);
+    
+    if (_dirty)
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(V3F_T2F)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
+        _dirty = false;
+    }
+    
+    if (Configuration::getInstance()->supportsShareableVAO())
+    {
+        GL::bindVAO(_vao);
+    }
+    
+    glDrawArrays(_drawMode, 0, _bufferCount);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
+    CC_INCREMENT_GL_DRAWN_BATCHES_AND_VERTICES(1,_bufferCount);
+    glDisable(GL_DEPTH_TEST);
+    CHECK_GL_ERROR_DEBUG();
+}

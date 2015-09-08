@@ -10,9 +10,9 @@
 #define __TestOpenGL__Cube__
 
 #include "cocos2d.h"
-#include "../DrawNode3D.h"
+#include "../DrawNode/DrawNode_VC.h"
 
-class Cube : public cocos2d::DrawNode3D
+class Cube : public DrawNode_VC
 {
 public:
     CREATE_FUNC(Cube);

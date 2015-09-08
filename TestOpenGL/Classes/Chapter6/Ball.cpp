@@ -44,12 +44,12 @@ void Ball::drawSphere(float radius)
             float y3 = radius * cosf(CC_DEGREES_TO_RADIANS(vAngle)) * sinf(CC_DEGREES_TO_RADIANS(hAngle-angleSpan));
             float z3 = radius * sinf(CC_DEGREES_TO_RADIANS(vAngle));
 
-            _buffer[vIndex*6+0] = {Vec3(x1, y1, z1), Color4B(255, 255, 255, 255)};
-            _buffer[vIndex*6+1] = {Vec3(x0, y0, z0), Color4B(255, 255, 255, 255)};
-            _buffer[vIndex*6+2] = {Vec3(x3, y3, z3), Color4B(255, 255, 255, 255)};
-            _buffer[vIndex*6+3] = {Vec3(x1, y1, z1), Color4B(255, 255, 255, 255)};
-            _buffer[vIndex*6+4] = {Vec3(x3, y3, z3), Color4B(255, 255, 255, 255)};
-            _buffer[vIndex*6+5] = {Vec3(x2, y2, z2), Color4B(255, 255, 255, 255)};
+            _buffer[vIndex*6+0] = Vec3(x1, y1, z1);
+            _buffer[vIndex*6+1] = Vec3(x0, y0, z0);
+            _buffer[vIndex*6+2] = Vec3(x3, y3, z3);
+            _buffer[vIndex*6+3] = Vec3(x1, y1, z1);
+            _buffer[vIndex*6+4] = Vec3(x3, y3, z3);
+            _buffer[vIndex*6+5] = Vec3(x2, y2, z2);
             
             vIndex++;
         }
@@ -73,7 +73,7 @@ void Ball::onDraw(const Mat4 &transform, uint32_t flags)
     if (_dirty)
     {
         glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(V3F_C4B)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(Vec3)*_bufferCapacity, _buffer, GL_STREAM_DRAW);
         _dirty = false;
     }
     

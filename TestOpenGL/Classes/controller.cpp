@@ -18,6 +18,7 @@ public:
     {
         addTest("Chapter 5", [](){return new (std::nothrow) TransformTest(); });
         addTest("Chapter 6", [](){return new (std::nothrow) LightTest(); });
+        addTest("Chapter 7", [](){return new (std::nothrow) TextureTest(); });
     }
 };
 

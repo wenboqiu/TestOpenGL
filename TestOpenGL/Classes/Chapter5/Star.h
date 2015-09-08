@@ -10,9 +10,9 @@
 #define __TestOpenGL__Star__
 
 #include "cocos2d.h"
-#include "../DrawNode3D.h"
+#include "../DrawNode/DrawNode_VC.h"
 
-class Star : public cocos2d::DrawNode3D
+class Star : public DrawNode_VC
 {
 public:
     CREATE_FUNC(Star);

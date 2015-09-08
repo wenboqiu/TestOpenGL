@@ -14,13 +14,19 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
+		402DF7071B9E53AA001768E6 /* TextureTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7051B9E53AA001768E6 /* TextureTest.cpp */; };
+		402DF70A1B9E562D001768E6 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7081B9E562D001768E6 /* Triangle.cpp */; };
+		402DF7121B9E5658001768E6 /* DrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF70C1B9E5658001768E6 /* DrawNode3D.cpp */; };
+		402DF7131B9E5658001768E6 /* DrawNode_V.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF70E1B9E5658001768E6 /* DrawNode_V.cpp */; };
+		402DF7141B9E5658001768E6 /* DrawNode_VC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7101B9E5658001768E6 /* DrawNode_VC.cpp */; };
+		402DF7171B9E5693001768E6 /* DrawNode_VT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7151B9E5693001768E6 /* DrawNode_VT.cpp */; };
+		402DF71A1B9E5F2B001768E6 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 402DF7191B9E5F2B001768E6 /* wall.png */; };
 		40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */; };
 		40829C231B7AB7B200F74D33 /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 40829C221B7AB7B200F74D33 /* shaders */; };
 		40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660451B99980800E9389F /* BaseTest.cpp */; };
 		40C6604D1B99980800E9389F /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660471B99980800E9389F /* controller.cpp */; };
 		40C660511B999A4400E9389F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 40C660501B999A4400E9389F /* Images */; };
 		40C660571B999BDF00E9389F /* TransformTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660551B999BDF00E9389F /* TransformTest.cpp */; };
-		40C6605A1B99A85A00E9389F /* DrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660581B99A85A00E9389F /* DrawNode3D.cpp */; };
 		40C660601B99AD7C00E9389F /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C6605E1B99AD7C00E9389F /* Star.cpp */; };
 		40C660631B9A5A2E00E9389F /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660611B9A5A2E00E9389F /* Cube.cpp */; };
 		40C660671B9AF7A500E9389F /* LightTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660651B9AF7A500E9389F /* LightTest.cpp */; };
@@ -119,6 +125,19 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		402DF7051B9E53AA001768E6 /* TextureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureTest.cpp; sourceTree = "<group>"; };
+		402DF7061B9E53AA001768E6 /* TextureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureTest.h; sourceTree = "<group>"; };
+		402DF7081B9E562D001768E6 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		402DF7091B9E562D001768E6 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		402DF70C1B9E5658001768E6 /* DrawNode3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode3D.cpp; sourceTree = "<group>"; };
+		402DF70D1B9E5658001768E6 /* DrawNode3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode3D.h; sourceTree = "<group>"; };
+		402DF70E1B9E5658001768E6 /* DrawNode_V.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode_V.cpp; sourceTree = "<group>"; };
+		402DF70F1B9E5658001768E6 /* DrawNode_V.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode_V.h; sourceTree = "<group>"; };
+		402DF7101B9E5658001768E6 /* DrawNode_VC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode_VC.cpp; sourceTree = "<group>"; };
+		402DF7111B9E5658001768E6 /* DrawNode_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode_VC.h; sourceTree = "<group>"; };
+		402DF7151B9E5693001768E6 /* DrawNode_VT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode_VT.cpp; sourceTree = "<group>"; };
+		402DF7161B9E5693001768E6 /* DrawNode_VT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode_VT.h; sourceTree = "<group>"; };
+		402DF7191B9E5F2B001768E6 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisibleRect.cpp; sourceTree = "<group>"; };
 		40829C201B7AB79C00F74D33 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibleRect.h; sourceTree = "<group>"; };
 		40829C221B7AB7B200F74D33 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
@@ -132,8 +151,6 @@
 		40C660501B999A4400E9389F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		40C660551B999BDF00E9389F /* TransformTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformTest.cpp; sourceTree = "<group>"; };
 		40C660561B999BDF00E9389F /* TransformTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformTest.h; sourceTree = "<group>"; };
-		40C660581B99A85A00E9389F /* DrawNode3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode3D.cpp; sourceTree = "<group>"; };
-		40C660591B99A85A00E9389F /* DrawNode3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode3D.h; sourceTree = "<group>"; };
 		40C6605E1B99AD7C00E9389F /* Star.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Star.cpp; sourceTree = "<group>"; };
 		40C6605F1B99AD7C00E9389F /* Star.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Star.h; sourceTree = "<group>"; };
 		40C660611B9A5A2E00E9389F /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
@@ -307,6 +324,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		402DF7041B9E538E001768E6 /* Chapter7 */ = {
+			isa = PBXGroup;
+			children = (
+				402DF7051B9E53AA001768E6 /* TextureTest.cpp */,
+				402DF7061B9E53AA001768E6 /* TextureTest.h */,
+				402DF7081B9E562D001768E6 /* Triangle.cpp */,
+				402DF7091B9E562D001768E6 /* Triangle.h */,
+			);
+			path = Chapter7;
+			sourceTree = "<group>";
+		};
+		402DF70B1B9E5658001768E6 /* DrawNode */ = {
+			isa = PBXGroup;
+			children = (
+				402DF70C1B9E5658001768E6 /* DrawNode3D.cpp */,
+				402DF70D1B9E5658001768E6 /* DrawNode3D.h */,
+				402DF70E1B9E5658001768E6 /* DrawNode_V.cpp */,
+				402DF70F1B9E5658001768E6 /* DrawNode_V.h */,
+				402DF7101B9E5658001768E6 /* DrawNode_VC.cpp */,
+				402DF7111B9E5658001768E6 /* DrawNode_VC.h */,
+				402DF7151B9E5693001768E6 /* DrawNode_VT.cpp */,
+				402DF7161B9E5693001768E6 /* DrawNode_VT.h */,
+			);
+			path = DrawNode;
+			sourceTree = "<group>";
+		};
 		40C660541B999BBC00E9389F /* Chapter5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +377,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				402DF7191B9E5F2B001768E6 /* wall.png */,
 				40C6606C1B9C755500E9389F /* sliderThumb.png */,
 				40C6606D1B9C755500E9389F /* sliderTrack.png */,
 				40C660501B999A4400E9389F /* Images */,
@@ -351,10 +395,10 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				402DF70B1B9E5658001768E6 /* DrawNode */,
 				40C660541B999BBC00E9389F /* Chapter5 */,
 				40C660641B9AF77E00E9389F /* Chapter6 */,
-				40C660581B99A85A00E9389F /* DrawNode3D.cpp */,
-				40C660591B99A85A00E9389F /* DrawNode3D.h */,
+				402DF7041B9E538E001768E6 /* Chapter7 */,
 				40C6604A1B99980800E9389F /* testBasic.h */,
 				40C6604F1B99995B00E9389F /* testResource.h */,
 				40C660451B99980800E9389F /* BaseTest.cpp */,
@@ -545,6 +589,7 @@
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				402DF71A1B9E5F2B001768E6 /* wall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,14 +614,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C6604D1B99980800E9389F /* controller.cpp in Sources */,
+				402DF7171B9E5693001768E6 /* DrawNode_VT.cpp in Sources */,
+				402DF7071B9E53AA001768E6 /* TextureTest.cpp in Sources */,
 				40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */,
+				402DF7141B9E5658001768E6 /* DrawNode_VC.cpp in Sources */,
 				40C6606B1B9AF8AC00E9389F /* Ball.cpp in Sources */,
 				40C660631B9A5A2E00E9389F /* Cube.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				402DF7131B9E5658001768E6 /* DrawNode_V.cpp in Sources */,
 				40C660601B99AD7C00E9389F /* Star.cpp in Sources */,
-				40C6605A1B99A85A00E9389F /* DrawNode3D.cpp in Sources */,
+				402DF7121B9E5658001768E6 /* DrawNode3D.cpp in Sources */,
+				402DF70A1B9E562D001768E6 /* Triangle.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				40C660671B9AF7A500E9389F /* LightTest.cpp in Sources */,

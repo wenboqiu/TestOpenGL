@@ -10,9 +10,9 @@
 #define __TestOpenGL__Ball__
 
 #include "cocos2d.h"
-#include "../DrawNode3D.h"
+#include "../DrawNode/DrawNode_V.h"
 
-class Ball : public cocos2d::DrawNode3D
+class Ball : public DrawNode_V
 {
 public:
     CREATE_FUNC(Ball);

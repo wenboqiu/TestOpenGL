@@ -3,5 +3,6 @@
 
 #include "Chapter5/TransformTest.h"
 #include "Chapter6/LightTest.h"
+#include "Chapter7/TextureTest.h"
 
 #endif
