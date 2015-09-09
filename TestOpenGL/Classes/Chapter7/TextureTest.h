@@ -35,4 +35,11 @@ public:
     TextureTest1();
 };
 
+class TextureTest2 : public TextureTestCase
+{
+public:
+    CREATE_FUNC(TextureTest2);
+    TextureTest2();
+};
+
 #endif /* defined(__TestOpenGL__TextureTest__) */

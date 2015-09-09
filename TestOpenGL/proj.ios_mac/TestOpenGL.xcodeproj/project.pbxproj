@@ -15,12 +15,13 @@
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		402DF7071B9E53AA001768E6 /* TextureTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7051B9E53AA001768E6 /* TextureTest.cpp */; };
-		402DF70A1B9E562D001768E6 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7081B9E562D001768E6 /* Triangle.cpp */; };
 		402DF7121B9E5658001768E6 /* DrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF70C1B9E5658001768E6 /* DrawNode3D.cpp */; };
 		402DF7131B9E5658001768E6 /* DrawNode_V.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF70E1B9E5658001768E6 /* DrawNode_V.cpp */; };
 		402DF7141B9E5658001768E6 /* DrawNode_VC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7101B9E5658001768E6 /* DrawNode_VC.cpp */; };
 		402DF7171B9E5693001768E6 /* DrawNode_VT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402DF7151B9E5693001768E6 /* DrawNode_VT.cpp */; };
 		402DF71A1B9E5F2B001768E6 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 402DF7191B9E5F2B001768E6 /* wall.png */; };
+		405911F01B9FA1AC0010A322 /* CustomSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 405911EE1B9FA1AC0010A322 /* CustomSprite.cpp */; };
+		405911F21B9FABFD0010A322 /* robot.png in Resources */ = {isa = PBXBuildFile; fileRef = 405911F11B9FABFD0010A322 /* robot.png */; };
 		40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */; };
 		40829C231B7AB7B200F74D33 /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 40829C221B7AB7B200F74D33 /* shaders */; };
 		40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C660451B99980800E9389F /* BaseTest.cpp */; };
@@ -127,8 +128,6 @@
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		402DF7051B9E53AA001768E6 /* TextureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureTest.cpp; sourceTree = "<group>"; };
 		402DF7061B9E53AA001768E6 /* TextureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureTest.h; sourceTree = "<group>"; };
-		402DF7081B9E562D001768E6 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
-		402DF7091B9E562D001768E6 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
 		402DF70C1B9E5658001768E6 /* DrawNode3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode3D.cpp; sourceTree = "<group>"; };
 		402DF70D1B9E5658001768E6 /* DrawNode3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode3D.h; sourceTree = "<group>"; };
 		402DF70E1B9E5658001768E6 /* DrawNode_V.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode_V.cpp; sourceTree = "<group>"; };
@@ -138,6 +137,9 @@
 		402DF7151B9E5693001768E6 /* DrawNode_VT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawNode_VT.cpp; sourceTree = "<group>"; };
 		402DF7161B9E5693001768E6 /* DrawNode_VT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNode_VT.h; sourceTree = "<group>"; };
 		402DF7191B9E5F2B001768E6 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
+		405911EE1B9FA1AC0010A322 /* CustomSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomSprite.cpp; sourceTree = "<group>"; };
+		405911EF1B9FA1AC0010A322 /* CustomSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSprite.h; sourceTree = "<group>"; };
+		405911F11B9FABFD0010A322 /* robot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot.png; sourceTree = "<group>"; };
 		40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisibleRect.cpp; sourceTree = "<group>"; };
 		40829C201B7AB79C00F74D33 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibleRect.h; sourceTree = "<group>"; };
 		40829C221B7AB7B200F74D33 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
@@ -329,8 +331,8 @@
 			children = (
 				402DF7051B9E53AA001768E6 /* TextureTest.cpp */,
 				402DF7061B9E53AA001768E6 /* TextureTest.h */,
-				402DF7081B9E562D001768E6 /* Triangle.cpp */,
-				402DF7091B9E562D001768E6 /* Triangle.h */,
+				405911EE1B9FA1AC0010A322 /* CustomSprite.cpp */,
+				405911EF1B9FA1AC0010A322 /* CustomSprite.h */,
 			);
 			path = Chapter7;
 			sourceTree = "<group>";
@@ -377,6 +379,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				405911F11B9FABFD0010A322 /* robot.png */,
 				402DF7191B9E5F2B001768E6 /* wall.png */,
 				40C6606C1B9C755500E9389F /* sliderThumb.png */,
 				40C6606D1B9C755500E9389F /* sliderTrack.png */,
@@ -570,6 +573,7 @@
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				405911F21B9FABFD0010A322 /* robot.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
@@ -616,6 +620,7 @@
 				40C6604D1B99980800E9389F /* controller.cpp in Sources */,
 				402DF7171B9E5693001768E6 /* DrawNode_VT.cpp in Sources */,
 				402DF7071B9E53AA001768E6 /* TextureTest.cpp in Sources */,
+				405911F01B9FA1AC0010A322 /* CustomSprite.cpp in Sources */,
 				40C6604C1B99980800E9389F /* BaseTest.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */,
@@ -626,7 +631,6 @@
 				402DF7131B9E5658001768E6 /* DrawNode_V.cpp in Sources */,
 				40C660601B99AD7C00E9389F /* Star.cpp in Sources */,
 				402DF7121B9E5658001768E6 /* DrawNode3D.cpp in Sources */,
-				402DF70A1B9E562D001768E6 /* Triangle.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				40C660671B9AF7A500E9389F /* LightTest.cpp in Sources */,
