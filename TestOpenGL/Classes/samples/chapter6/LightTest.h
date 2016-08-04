@@ -9,8 +9,8 @@
 #ifndef __TestOpenGL__LightTest__
 #define __TestOpenGL__LightTest__
 
-#include "../testBasic.h"
-#include "../BaseTest.h"
+#include "testBasic.h"
+#include "BaseTest.h"
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
 
@@ -26,7 +26,7 @@ public:
     void updateLightLocation(int percent);
     
 protected:
-    virtual void onBackCallback(Ref* sender);
+    virtual void onBackCallback(Ref* sender) override;
     std::string _title;
     std::string _subtitle;
     virtual std::string title() const override {return _title;};

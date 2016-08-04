@@ -10,12 +10,14 @@
 #define __TestOpenGL__Star__
 
 #include "cocos2d.h"
-#include "../DrawNode/DrawNode_VC.h"
+#include "CustomDrawNode.h"
+#include "customTypes.h"
 
-class Star : public DrawNode_VC
+class Star : public CustomDrawNode<class V3F_C4B>
 {
 public:
     CREATE_FUNC(Star);
+    virtual bool init();
     void drawStar(float radiusOut, float radiusIn);
     
 CC_CONSTRUCTOR_ACCESS:

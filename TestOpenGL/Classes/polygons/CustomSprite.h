@@ -10,17 +10,18 @@
 #define __TestOpenGL__CustomSprite__
 
 #include "cocos2d.h"
-#include "../DrawNode/DrawNode_VT.h"
+#include "CustomDrawNode.h"
 
-class CustomSprite : public DrawNode_VT
+class CustomSprite : public CustomDrawNode<cocos2d::V3F_T2F>
 {
 public:
     CREATE_FUNC(CustomSprite);
+    virtual bool init();
     
     void setTexture(cocos2d::Texture2D *texture);
     void addImage(const std::string &filepath);
     void resetBuffer();
-    void addVertex(V3F_T2F vertex);
+    void addVertex(cocos2d::V3F_T2F vertex);
     
     virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
     

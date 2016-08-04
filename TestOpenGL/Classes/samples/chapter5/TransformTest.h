@@ -9,8 +9,8 @@
 #ifndef __TestOpenGL__TransformTest__
 #define __TestOpenGL__TransformTest__
 
-#include "../testBasic.h"
-#include "../BaseTest.h"
+#include "testBasic.h"
+#include "BaseTest.h"
 #include "cocos2d.h"
 DEFINE_TEST_SUITE(TransformTest);
 
@@ -20,7 +20,7 @@ public:
     TransformTestCase();
     
 protected:
-    virtual void onBackCallback(Ref* sender);
+    virtual void onBackCallback(Ref* sender) override;
     std::string _title;
     std::string _subtitle;
     virtual std::string title() const override {return _title;};

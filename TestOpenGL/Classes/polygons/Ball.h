@@ -10,12 +10,13 @@
 #define __TestOpenGL__Ball__
 
 #include "cocos2d.h"
-#include "../DrawNode/DrawNode_V.h"
+#include "CustomDrawNode.h"
 
-class Ball : public DrawNode_V
+class Ball : public CustomDrawNode<class cocos2d::Vec3>
 {
 public:
     CREATE_FUNC(Ball);
+    virtual bool init();
     
     void drawSphere(float radius);
     virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags);

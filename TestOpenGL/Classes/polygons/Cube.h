@@ -10,12 +10,14 @@
 #define __TestOpenGL__Cube__
 
 #include "cocos2d.h"
-#include "../DrawNode/DrawNode_VC.h"
+#include "CustomDrawNode.h"
+#include "customTypes.h"
 
-class Cube : public DrawNode_VC
+class Cube : public CustomDrawNode<class V3F_C4B>
 {
 public:
     CREATE_FUNC(Cube);
+    virtual bool init();
     /**
      * Draw 3D Line
      */

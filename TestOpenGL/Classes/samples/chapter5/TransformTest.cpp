@@ -7,7 +7,7 @@
 //
 
 #include "TransformTest.h"
-#include "../testResource.h"
+#include "testResource.h"
 #include "Star.h"
 #include "Cube.h"
 
