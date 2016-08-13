@@ -55,6 +55,8 @@ public:
     */
     void setBlendFunc(const BlendFunc &blendFunc);
     
+    inline void setDrawMode(GLuint mode){ _drawMode = mode;}
+    
     void loadShaderVertex(const std::string &vert, const std::string &frag);
 
     virtual void onDraw(const cocos2d::Mat4& transform, uint32_t flags) = 0;

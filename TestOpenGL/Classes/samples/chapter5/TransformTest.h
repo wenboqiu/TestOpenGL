@@ -57,4 +57,13 @@ protected:
     cocos2d::EventListenerTouchOneByOne* _lis;
 };
 
+class TransformTest5_1 : public TransformTestCase
+{
+public:
+    CREATE_FUNC(TransformTest5_1);
+    TransformTest5_1();
+    
+protected:
+};
+
 #endif /* defined(__TestOpenGL__TransformTest__) */

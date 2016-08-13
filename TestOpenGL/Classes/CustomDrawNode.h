@@ -91,7 +91,6 @@ void CustomDrawNode<Type>::onDraw(const cocos2d::Mat4 &transform, uint32_t flags
     }
     
     glDrawArrays(_drawMode, 0, _bufferCount);
-//    glBindBuffer(GL_ARRAY_BUFFER, 0);
     
     if (cocos2d::Configuration::getInstance()->supportsShareableVAO())
     {

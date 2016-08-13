@@ -30,6 +30,8 @@
 		406EC9CA1D52C4E9006421FB /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 406EC9C61D52C4E9006421FB /* controller.cpp */; };
 		40829C211B7AB79C00F74D33 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */; };
 		40829C231B7AB7B200F74D33 /* shaders in Resources */ = {isa = PBXBuildFile; fileRef = 40829C221B7AB7B200F74D33 /* shaders */; };
+		40930D1B1D5F0BD50090C971 /* PointsOrLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40930D191D5F0BD50090C971 /* PointsOrLines.cpp */; };
+		40930D1C1D5F0BD50090C971 /* PointsOrLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40930D191D5F0BD50090C971 /* PointsOrLines.cpp */; };
 		40C660511B999A4400E9389F /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 40C660501B999A4400E9389F /* Images */; };
 		40C6606E1B9C755500E9389F /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C6606C1B9C755500E9389F /* sliderThumb.png */; };
 		40C6606F1B9C755500E9389F /* sliderTrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C6606D1B9C755500E9389F /* sliderTrack.png */; };
@@ -155,6 +157,8 @@
 		40829C1F1B7AB79C00F74D33 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisibleRect.cpp; sourceTree = "<group>"; };
 		40829C201B7AB79C00F74D33 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisibleRect.h; sourceTree = "<group>"; };
 		40829C221B7AB7B200F74D33 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
+		40930D191D5F0BD50090C971 /* PointsOrLines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointsOrLines.cpp; sourceTree = "<group>"; };
+		40930D1A1D5F0BD50090C971 /* PointsOrLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsOrLines.h; sourceTree = "<group>"; };
 		40C660501B999A4400E9389F /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		40C6606C1B9C755500E9389F /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		40C6606D1B9C755500E9389F /* sliderTrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack.png; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 				406EC99C1D52BC25006421FB /* CustomSprite.h */,
 				406EC99D1D52BC25006421FB /* Star.cpp */,
 				406EC99E1D52BC25006421FB /* Star.h */,
+				40930D191D5F0BD50090C971 /* PointsOrLines.cpp */,
+				40930D1A1D5F0BD50090C971 /* PointsOrLines.h */,
 			);
 			path = polygons;
 			sourceTree = "<group>";
@@ -627,6 +633,7 @@
 				406EC9C11D52C446006421FB /* TextureTest.cpp in Sources */,
 				406EC9A61D52BC25006421FB /* Star.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				40930D1B1D5F0BD50090C971 /* PointsOrLines.cpp in Sources */,
 				406EC9A21D52BC25006421FB /* DrawNode3D.cpp in Sources */,
 				406EC9CA1D52C4E9006421FB /* controller.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -640,6 +647,7 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				40930D1C1D5F0BD50090C971 /* PointsOrLines.cpp in Sources */,
 				406EC9AA1D52C2F0006421FB /* DrawNode3D.cpp in Sources */,
 				406EC9A91D52C2EB006421FB /* VisibleRect.cpp in Sources */,
 			);
